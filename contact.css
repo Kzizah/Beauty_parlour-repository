@@ -1,0 +1,56 @@
+body {
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+  }  
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    height: 50px;
+    background-color: grey;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    padding: 0px 5%;
+  }
+  
+  nav button {
+    width: 140px;
+    height: 33px;
+    font-family: calibri;
+    font-weight: bold;
+    font-size: 14px;
+    outline-offset: inherit;
+    background-color: darkslategray;
+    color: #000000;
+    border: none;
+  }
+  
+  nav button:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  p#p1
+      {
+      font-size: 60px;
+      font-weight: bold;
+      color: black;
+      line-height: 50px;
+      text-align: left;
+  
+      }
+  
+  p#p2
+      {
+      font-size: 60px;
+      font-weight: bold;
+      color: black;
+      line-height: 50px;
+      text-align: left;
+  
+      }
