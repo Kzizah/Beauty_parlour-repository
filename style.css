@@ -35,7 +35,7 @@ nav ul {
   display: flex;
 }
 
-p#p1
+#p1
     {
     font-size: 60px;
     font-weight: bold;
@@ -45,7 +45,7 @@ p#p1
 
     }
 
-p#p2
+#p2
     {
     font-size: 60px;
     font-weight: bold;
