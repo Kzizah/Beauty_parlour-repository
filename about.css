@@ -4,6 +4,10 @@ body {
     padding: 0px;
   }  
   
+.logo{
+    font-size: 30px;
+}
+
 nav {
     display: flex;
     justify-content: space-between;

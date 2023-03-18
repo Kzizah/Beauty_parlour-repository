@@ -3,6 +3,11 @@ body {
     margin: 0px;
     padding: 0px;
   }
+
+.logo{
+    font-size: 30px;
+}
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -50,7 +55,7 @@ body {
 
 .serviceSection{
     width: 100%;
-    height: 300vh;
+    height: 260vh;                                                                                                             
     background-image: url("media/icons8-team-ZGzHKEpem88-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
