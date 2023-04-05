@@ -111,3 +111,116 @@
     transition: all 0.3s ease;
 }
 
+/* Mess around with the media queries */
+@media screen and (max-width: 960px) {
+    /* Target the nav container */
+    .navbar__container {
+      display: flex;
+      justify-content: space-between;
+      height: 80px;
+      z-index: 1;
+      width: 100%;
+      max-width: 1300px;
+      padding: 0;
+    }
+
+    /* Target the navbar menu */
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        /* this is the drop down effect. position has to be absolute */
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: -1;
+      }
+
+    /* navbar menu active - it showcases that when the icon is clicked */
+    .navbar__menu.active {
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 1.6rem;
+    }
+    /* Target the nav logo */
+    #navbar__logo {
+        padding-left: 25px;
+    }
+
+    /* Create the actual hamburger menu */
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    /* Target the navbar item */
+    .navbar__item {
+        width: 100%;
+    }
+
+    /* Target the navbar links */
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        /* the links are centered */
+        display: table;
+    }
+
+    /* Targets the button */
+    .navbar__btn {
+        /* the button comes 2rem abouve the edge of the nav container */
+        padding-bottom: 2rem;
+    }
+
+    /* still on the button (becomes thicker) */
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    /* Targetour mobile menu (changes of screen sizes) */
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    /* Lets get the menu on the top right (the three lines on the furthest topright) */
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* add a class is active and whenever its clicked i want it to be toggled. */
+    /* on the bars thats child of two  (targets second child and it dissappears there*/
+    /* I want it todo alittle cool spin */
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    /* targets first child */
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    /* targets second child */
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
