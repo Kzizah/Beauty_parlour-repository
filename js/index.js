@@ -18,5 +18,33 @@ const mobileMenu = () => {
 // Call the mobileMenu function
 menu.addEventListener('click', mobileMenu);
 
+getFirstFilm()
+initialize();
+//DOM renders 
+function renderOneService(service){
+   //Create list item for each film
+   let listItem = document.createElement('li');
+   let availableSlots = service.session_slots - service.booked_slots;
+   listItem.innerText = `${service.service_name}`;
+   listItem.addEventListener('click', () => {
+    //Display film Details
+    imageDiv.src = service.image;
+    priceDiv.textContent = `Service Price in $: ${service.price}`;
+    availableSlots.textContent = `Available Session Slots: ${slotsRemaining}`;
+      // Event listener for buy ticket button clicks
+  bookNowBtn.addEventListener("click", (e) =>{
+    e.preventDefault();
+    console.log("boooked Session!");
+    slotsRemaining -= 1;
+    if(slotsRemaining <= 0){
+        availableSlots.textContent = `All Sessions Booked!` 
+    }else{
+            availableSlots.textContent = `Available Session Slots : ${slotsRemaining}` 
+    }
+    
+  });
+   });
+   serviceList.appendChild(listItem);
+}
 
 
