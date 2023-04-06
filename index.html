@@ -82,12 +82,12 @@
 
     <!-- Services Section -->
     <div class="services" id="services">
-      <div id="services-page">
+      <div id="service-page">
         <h1>Our Services</h1>
         <p>Our servives are affordable, Sensational and of high quality</p>
         <h2 id="service-list">Services</h2>
           <ul>
-              <li></li>
+              
           </ul>
       </div>
       
@@ -97,8 +97,9 @@
         <p id="service-description"></p>
         <p id="session-slots"></p>
         <p id="booked-slots"></p>
+        <p id="service-price"></p>
         <!-- <button class="main__btn" type="button">Book Now</button> -->
-        <button class="main__btn"><a href="#">Book Now</a></button>
+        <button class="main__btn" id="book-now" type="button"><a href="#">Book Now</a></button>
       </div>
 
       <div id="add-service">
@@ -117,12 +118,12 @@
             <input type="text" id="service-description" name="service-description" required>
           </div>
           <div>
-            <label for="Session slots">Session slots:</label>
-            <input type="number" id="session-slots" name="session-slots" required>
+            <label for="available-session-slots"> Available Session slots:</label>
+            <input type="number" id="available-session-slots" name="available-session-slots" required>
           </div>
           <div>
-            <label for="booked-slots">Booked slots:</label>
-            <input type="number" id="booked-slots" name="booked-slots" required>
+            <label for="session-price">Booked slots:</label>
+            <input type="number" id="session-price" name="session-price" required>
           </div>
           <!-- <button type="submit" class="main__btn">Add Service</button> -->
           <button class="main__btn"><a href="#">Add Service</a></button>
