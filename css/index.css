@@ -467,7 +467,7 @@ update with little border bottom right here */
     left: 0;
     width: 0;
     height: 100%;
-    background: #f78503;
+    background: #575ceb;
     transition: all 0.35s;
     border-radius: 4px;
 }
@@ -505,7 +505,7 @@ update with little border bottom right here */
   }
 
   .main__img--card:hover {
-    color: #9518fc;
+    color: #3a06f5;
     /* gives it a nice clean smooth effect when you hover on it */
     transition: all 0.3s ease;
   }
@@ -751,7 +751,123 @@ update with little border bottom right here */
   background-color: #555;
 } 
 
+/* Mobie Responsives for the service section */
+@media screen and (max-width: 1100px) {
+  /* Services section */
+  #services {
+    padding: 50px 20px;
+  }
+  
+  #service-page {
+    text-align: center;
+  }
+  
+  #service-page h1 {
+    font-size: 2.5rem;
+  }
+  
+  #service-page p {
+    font-size: 1.5rem;
+  }
+  
+  #service__details {
+    margin-top: 50px;
+  }
+  
+  #service__details img {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  #add-service {
+    margin-top: 50px;
+  }
+  
+  #add-service form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #add-service label {
+    margin-top: 20px;
+  }
+  
+  #add-service input {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #add-service button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
 
+@media screen and (max-width: 1100px) {
+  /* Services section */
+  #services {
+    padding: 20px 20px;
+  }
+  
+  #service-page {
+    text-align: center;
+  }
+  
+  #service-page h1 {
+    font-size: 2.5rem;
+  }
+  
+  #service-page p {
+    font-size: 1.5rem;
+  }
+  
+  #service__details {
+    margin-top: 50px;
+  }
+  
+  #service__details img {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  #add-service {
+    margin-top: 50px;
+  }
+  
+  #add-service form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #add-service label {
+    margin-top: 20px;
+  }
+  
+  #add-service input {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #add-service button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+  }
+}
 
 
 
