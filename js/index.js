@@ -48,7 +48,7 @@ function renderOneService(service){
    listItem.addEventListener('click', () => {
     //Display service Details
     imageDiv.src = service.image;
-    priceDiv.textContent = `Service Price: ${service.Price}`;
+    priceDiv.textContent = `Service Price: ${service.price}`;
     descriptionDiv.textContent = `Description: ${service.description}`
     availableSessionSlotsDiv.textContent = `Available Session Slots: ${remainingSlots}`;
       
@@ -70,6 +70,7 @@ function renderOneService(service){
    serviceList.appendChild(listItem);
 }
 
+
 // Fetch all services
 function getAllServices(){
     fetch('http://localhost:3000/services')
@@ -85,7 +86,7 @@ function getAllServices(){
 function getFirstService(){
     fetch('http://localhost:3000/services/1')
     .then(res => res.json())
-    .then(services => renderOneService(services[0]))
+    .then(services => renderOneService(services))
 }
 
 //Initialize Render- It will be the first thing that loads from our index js
@@ -106,3 +107,45 @@ function updateAvailableSlots(service, slotsBooked) {
     return true;
   }
   
+
+//The addService function takes an service object as a parameter, sends a POST request to the API to add the new service, and then logs the response to the console.
+function addService(service) {
+    fetch(`http://localhost:3000/services`, {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(service)
+    })
+    .then(response => response.json())
+    .then(service => {
+        console.log('Available SLots updated:', service);
+        })
+    .catch(error => {
+        console.error('Error updating Availabe Slots:', error);
+    });
+
+}
+
+//the code selects the form element on the page and adds an event listener for the 'submit' event.
+//When the form is submitted, the function creates a new animal object using the values entered in the form fields and passes it to the addAnimal function to add it to the API.
+let form = document.querySelector("form");
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    //get form values
+    let service = {
+        service_name : document.getElementById("service").value,
+        image : document.getElementById("image-url").value,
+        description : document.getElementById("service-description").value,
+        session_slots : document.getElementById("session-slots").value,
+        booked_slots : document.getElementById("booked-slots").value,
+        price : document.getElementById("session-price").value
+    }
+addService(service);
+});
+
+
+
+
+
+
