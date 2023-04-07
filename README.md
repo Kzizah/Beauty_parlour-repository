@@ -8,10 +8,10 @@ This is a web application that allows users to book various services. In this ap
 ## Getting Started
 To get started with this project, follow these steps:
 
-1. ```{Clone this repository to your local machine.}```
-2. ```{Install the necessary dependencies by running npm install.}```
-3. ```{Start the development server by running npm start.}```
-4. ```{Open your web browser and navigate to http://localhost:3000.}```
+1. ```Clone this repository to your local machine.```
+2. ```Install the necessary dependencies by running npm install.```
+3. ```Start the development server by running npm start.```
+4. ```Open your web browser and navigate to http://localhost:3000.```
 
 ## Features
 * Display mobile menu
@@ -22,7 +22,7 @@ To get started with this project, follow these steps:
 
 # **User Stories**
 ## Display Mobile Menu
-As a *user*, I want to be able to access the menu on my mobile device, so I can easily navigate the application.
+As a ```*user*```, I want to be able to access the menu on my mobile device, so I can easily navigate the application.
 
 ### Scenario
 Given I am on the home page
@@ -30,7 +30,7 @@ When I click on the mobile menu icon in the top-right corner of the page
 Then the menu should expand and show the menu links
 
 ## Search for a Specific Service
-As a *user*, I want to search for a specific service, so I can quickly find the service I'm interested in.
+As a ```*user*```, I want to search for a specific service, so I can quickly find the service I'm interested in.
 
 ### Scenario
 Given I am on the home page
@@ -38,7 +38,7 @@ When I enter the name of a service in the search bar
 Then the list of services should be filtered to show only services with a name that includes the search term
 
 ## Display Service Details
-As a *user*, I want to see the details of a service, so I can decide if I want to book a session.
+As a ```*user*```, I want to see the details of a service, so I can decide if I want to book a session.
 
 ### Scenario
 Given I am on the home page
@@ -46,7 +46,7 @@ When I click on a service from the list of services
 Then the service details (image, price, description, and available session slots) should be displayed
 
 ## Buy a Ticket for a Service
-As a *user*, I want to be able to book a session for a specific service, so I can reserve a spot for that service.
+As a ```*user*```, I want to be able to book a session for a specific service, so I can reserve a spot for that service.
 
 ### Scenario
 Given I am on the service details page for a specific service
@@ -54,7 +54,7 @@ When I click on the 'Book Now' button
 Then a session slot should be booked for that service and the available session slots should be updated
 
 ## Add a New Service to the List
-As an *administrator*, I want to be able to add a new service to the list, so users can book sessions for that service.
+As an ```*administrator*```, I want to be able to add a new service to the list, so users can book sessions for that service.
 
 ### Scenario
 Given I am an administrator
@@ -89,14 +89,14 @@ The code also applies styling to the service details image in `index.js` and the
 ## Contributing
 To contribute to this project, please follow these guidelines:
 
-1. Fork this repository.
+1. Fork this **repository**.
 2. Create a new branch for your changes.
-3. Make your changes and commit them to your branch.
-4. Push your changes to your forked repository.
+3. Make your changes and **commit** them to your branch.
+4. Push your changes to your **forked repository**.
 
 ## License
-This project is licensed under the MIT License. See the <LICENSE.md> file for details.
+This project is licensed under the MIT License. See the ``<LICENSE.md>`` file for details.
 
 ## Acknowledgements
-* This project was created using the guidance of tutorials from <stand ups> and <standouts> and <canvas>.
-* The project was inspired by the idea of <Service Booking App> on Dribbble.
+* This project was created using the guidance of tutorials from ``<stand ups>`` and ``<standouts>`` and ``<canvas>``.
+* The project was inspired by the idea of ``<Service Booking App>`` on Dribbble.
