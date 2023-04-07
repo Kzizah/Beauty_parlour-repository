@@ -358,6 +358,7 @@ update with little border bottom right here */
 
 
 /* About Section/ Main section */
+
 /* Style the about page */
 .main {
     background: #16222A;  /* fallback for old browsers */
@@ -456,6 +457,7 @@ update with little border bottom right here */
     color: #fff;
     text-decoration: none;
 }
+
 
 /* *** Slide hove animation action*/
 .main__btn:after {
@@ -622,8 +624,9 @@ update with little border bottom right here */
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   text-transform: uppercase;
-  margin-bottom: 32px;
+  margin-bottom: 50px;
   margin-left: 50px;
+  margin margin-top: 10px;
 }
 
 .services p{
@@ -708,6 +711,21 @@ update with little border bottom right here */
   border: none;
   border-radius: 5px;
   margin-bottom: 20px;
+}
+
+#book-now button{
+    font-size: 1.8rem;
+    background: #833ab4;
+    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    padding: 20px 60px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
 }
 
 /* #add-service button {

@@ -6,10 +6,10 @@ const serviceDetails = document.querySelector('#service__details');
 const imageDiv = document.querySelector('#service-image'); //This is the service image
 const priceDiv = document.querySelector('#service-price');
 const descriptionDiv = document.querySelector('#service-description');
-// const ticketDiv = document.querySelector('#film-tickets');
+const availableSessionSlotsDiv = document.querySelector('#available-session-slots');
 const bookNowBtn = document.querySelector('#book-now');
-imageDiv.style.height ="100px";
-imageDiv.style.width ="100px";
+imageDiv.style.height ="500px";
+imageDiv.style.width ="500px";
 // Display Mobile Menu
 const mobileMenu = () => {
     menu.classList.toggle('is-active');
@@ -20,31 +20,50 @@ const mobileMenu = () => {
 // Call the mobileMenu function
 menu.addEventListener('click', mobileMenu);
 
+
+//searchbar
+// function search_service() {
+//     let input = document.getElementById('searchbar').value
+//     input=input.toLowerCase();
+//     let x = document.getElementsByClassName('service');
+      
+//     for (i = 0; i < x.length; i++) { 
+//         if (!x[i].innerHTML.toLowerCase().includes(input)) {
+//             x[i].style.display="none";
+//         }
+//         else {
+//             x[i].style.display="list-item";                 
+//         }
+//     }
+// }
+
 getFirstService()
 initialize();
 //DOM renders 
 function renderOneService(service){
    //Create list item for each service
    let listItem = document.createElement('li');
-   let availableSessionSlots = service.session_slots - service.booked_slots;
+   let remainingSlots = service.session_slots - service.booked_slots;
    listItem.innerText = `${service.service_name}`;
    listItem.addEventListener('click', () => {
     //Display service Details
     imageDiv.src = service.image;
-    priceDiv.textContent = `Service Price: ${service.price}`;
+    priceDiv.textContent = `Service Price: ${service.Price}`;
     descriptionDiv.textContent = `Description: ${service.description}`
-    availableSessionSlots.textContent = `Available Session Slots: ${availableSessionSlots}`;
+    availableSessionSlotsDiv.textContent = `Available Session Slots: ${remainingSlots}`;
       
     // Event listener for buy ticket button clicks
     bookNowBtn.addEventListener("click", (e) =>{
     e.preventDefault();
-    console.log("boooked Session!");
-    availableSessionSlots -= 1;
-    if(availableSessionSlots <= 0){
-        availableSessionSlots.textContent = `All Sessions Booked!` 
-    }else{
-            availableSessionSlots.textContent = `Available Session Slots : ${availableSessionSlots}` 
-    }
+    console.log("booked Session!");
+    if (updateAvailableSlots(service, 1)) {
+        service.booked_slots += 1;
+        const outputMessage = document.createElement("p");
+        outputMessage.textContent = "You have secured a slot";
+        availableSessionSlotsDiv.appendChild(outputMessage);
+      } else {
+        availableSessionSlotsDiv.textContent = `All sessions booked!`;
+      }
     
   });
    });
@@ -66,7 +85,7 @@ function getAllServices(){
 function getFirstService(){
     fetch('http://localhost:3000/services/1')
     .then(res => res.json())
-    .then(films => renderOneService(services[0]))
+    .then(services => renderOneService(services[0]))
 }
 
 //Initialize Render- It will be the first thing that loads from our index js
@@ -77,15 +96,13 @@ function initialize(){
 
 // Function to update the available tickets on the frontend
 function updateAvailableSlots(service, slotsBooked) {
-    // const ticketDiv = document.querySelector(`#film-tickets`);
-    // const availableTickets = film.capacity - film.tickets_sold;
-    // const newAvailableTickets = availableTickets - ticketsBought;
-    // if (newAvailableTickets < 0) {
-    //   // Can't buy more tickets than are available
-    //   return false;
-    // }
-    // ticketDiv.textContent = `Available Tickets: ${newAvailableTickets}`;
-    // return true;
+    const remainingSlots = service.session_slots - service.booked_slots;
+    const newRemainingSlots = remainingSlots - slotsBooked;
+    if (newRemainingSlots < 0) {
+      // Can't book more slots than are available
+      return false;
+    }
+    availableSessionSlotsDiv.textContent = `Available Session Slots: ${newRemainingSlots}`;
+    return true;
   }
-
-
+  

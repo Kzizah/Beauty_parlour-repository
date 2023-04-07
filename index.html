@@ -42,7 +42,7 @@
                 </li> -->
               </ul>
               <div class="search-box">
-                <input type="text" class="tbox" placeholder="Search..">
+                <input type="text" class="tbox" placeholder="Search.." onkeyup="search_service()" id="searchbar" >
                 <button class="search-btn"><i class="fas fa-search"></i></button>
               </div>
         </div>
@@ -78,29 +78,39 @@
           </div>
         </div>
       </div>
-
+      <!-- <p>Our servives are affordable, <br>
+        Sensational and of high quality</p> -->
     <!-- Services Section -->
     <div class="services" id="services">
-      <header>
       <div id="service-page">
         <h1>Our Services</h1>
-        <p>Our servives are affordable, Sensational and of high quality</p>
-      </div>
-    </header>
+        <p>Our servives are affordable, <br>
+          Sensational and of high quality</p>
+<!-- 
+          <ol id='list'>
+            <li class="service">Pedicure</li>
+            <li class="service">Manicure</li>
+            <li class="service">Eyelashes</li>
+            <li class="service">Haircut</li>
+            <li class="service">Conditioning</li>
+            <li class="service">Styling</li>
+            
+        </ol> -->
+
         <div id="service-list">
           <h2>Services</h2>
           <ul></ul>
         </div>
+    </div>
       
       
       <div id="service__details">
         <h2 id="service-name">Service Details</h2>
         <img id="service-image" src="" alt="">
         <p id="service-description"></p>
-        <p id="session-slots"></p>
-        <p id="booked-slots"></p>
+        <p id="available-session-slots"></p>
         <p id="service-price"></p>
-        <!-- <button class="main__btn" type="button">Book Now</button> -->
+        <!-- <button id="book-now" type="button">Book Now</button> -->
         <button class="main__btn" id="book-now" type="button"><a href="#">Book Now</a></button>
       </div>
 
