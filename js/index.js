@@ -76,7 +76,7 @@ function renderOneService(service){
 
 // Fetch all services
 function getAllServices(){
-    fetch('https://starlit-starlight-eec61a.netlify.app/.netlify/functions/services')
+    fetch('https://dashing-zabaione-026d59.netlify.app/.netlify/functions/services')
     .then(res => res.json())
     .then(services => services.forEach(service => {
         renderOneService(service)
@@ -87,7 +87,7 @@ function getAllServices(){
 //Fetch Requests
 //Get Fetch for one service resource
 function getFirstService(){
-    fetch('https://starlit-starlight-eec61a.netlify.app/.netlify/functions/services/1')
+    fetch('https://dashing-zabaione-026d59.netlify.app/.netlify/functions/services/1')
     .then(res => res.json())
     .then(services => renderOneService(services))
 }
@@ -114,7 +114,7 @@ function updateAvailableSlots(service, slotsBooked) {
 
 //The addService function takes an service object as a parameter, sends a POST request to the API to add the new service, and then logs the response to the console.
 function addService(service) {
-    fetch(`https://elaborate-taffy-2f76af.netlify.app/.netlify/functions/posts`, {
+    fetch(`https://dashing-zabaione-026d59.netlify.app/.netlify/functions/posts`, {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
