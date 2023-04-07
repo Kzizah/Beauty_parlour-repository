@@ -114,7 +114,7 @@ function updateAvailableSlots(service, slotsBooked) {
 
 //The addService function takes an service object as a parameter, sends a POST request to the API to add the new service, and then logs the response to the console.
 function addService(service) {
-    fetch(`https://dashing-zabaione-026d59.netlify.app/.netlify/functions/posts`, {
+    fetch(`https://dashing-zabaione-026d59.netlify.app/.netlify/functions/services`, {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'

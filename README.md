@@ -1,4 +1,6 @@
-# Beauty_parlour-repository
+# Beauty_parlour-
+
+https://img.shields.io/bower/l/license%20MIT
 
 ## Behavior Driven Development for Service Booking Application
 This is a web application that allows users to book various services. In this application, users can view a list of services and book a session for a specific service.
@@ -6,10 +8,10 @@ This is a web application that allows users to book various services. In this ap
 ## Getting Started
 To get started with this project, follow these steps:
 
-1. Clone this repository to your local machine.
-2. Install the necessary dependencies by running npm install.
-3. Start the development server by running npm start.
-4. Open your web browser and navigate to http://localhost:3000.
+1. ```{Clone this repository to your local machine.}```
+2. ```{Install the necessary dependencies by running npm install.}```
+3. ```{Start the development server by running npm start.}```
+4. ```{Open your web browser and navigate to http://localhost:3000.}```
 
 ## Features
 * Display mobile menu
@@ -18,9 +20,9 @@ To get started with this project, follow these steps:
 * Buy a ticket for a service
 * Add a new service to the list
 
-# User Stories
+# **User Stories**
 ## Display Mobile Menu
-As a user, I want to be able to access the menu on my mobile device, so I can easily navigate the application.
+As a *user*, I want to be able to access the menu on my mobile device, so I can easily navigate the application.
 
 ### Scenario
 Given I am on the home page
@@ -28,7 +30,7 @@ When I click on the mobile menu icon in the top-right corner of the page
 Then the menu should expand and show the menu links
 
 ## Search for a Specific Service
-As a user, I want to search for a specific service, so I can quickly find the service I'm interested in.
+As a *user*, I want to search for a specific service, so I can quickly find the service I'm interested in.
 
 ### Scenario
 Given I am on the home page
@@ -36,7 +38,7 @@ When I enter the name of a service in the search bar
 Then the list of services should be filtered to show only services with a name that includes the search term
 
 ## Display Service Details
-As a user, I want to see the details of a service, so I can decide if I want to book a session.
+As a *user*, I want to see the details of a service, so I can decide if I want to book a session.
 
 ### Scenario
 Given I am on the home page
@@ -44,7 +46,7 @@ When I click on a service from the list of services
 Then the service details (image, price, description, and available session slots) should be displayed
 
 ## Buy a Ticket for a Service
-As a user, I want to be able to book a session for a specific service, so I can reserve a spot for that service.
+As a *user*, I want to be able to book a session for a specific service, so I can reserve a spot for that service.
 
 ### Scenario
 Given I am on the service details page for a specific service
@@ -52,7 +54,7 @@ When I click on the 'Book Now' button
 Then a session slot should be booked for that service and the available session slots should be updated
 
 ## Add a New Service to the List
-As an administrator, I want to be able to add a new service to the list, so users can book sessions for that service.
+As an *administrator*, I want to be able to add a new service to the list, so users can book sessions for that service.
 
 ### Scenario
 Given I am an administrator
