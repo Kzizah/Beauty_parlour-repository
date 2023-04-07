@@ -22,20 +22,20 @@ menu.addEventListener('click', mobileMenu);
 
 
 //searchbar
-// function search_service() {
-//     let input = document.getElementById('searchbar').value
-//     input=input.toLowerCase();
-//     let x = document.getElementsByClassName('service');
+function search_service() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('services');
       
-//     for (i = 0; i < x.length; i++) { 
-//         if (!x[i].innerHTML.toLowerCase().includes(input)) {
-//             x[i].style.display="none";
-//         }
-//         else {
-//             x[i].style.display="list-item";                 
-//         }
-//     }
-// }
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
 
 getFirstService()
 initialize();
@@ -49,7 +49,7 @@ function renderOneService(service){
     //Display service Details
     imageDiv.src = service.image;
     priceDiv.textContent = `Service Price: ${service.price}`;
-    descriptionDiv.textContent = `Description: ${service.description}`
+    //descriptionDiv.textContent = `Description: ${service.description}`;
     availableSessionSlotsDiv.textContent = `Available Session Slots: ${remainingSlots}`;
       
     // Event listener for buy ticket button clicks
@@ -66,10 +66,11 @@ function renderOneService(service){
       }
     
   });
+  // Event listener for delete button clicks
+  
    });
    serviceList.appendChild(listItem);
 }
-
 
 // Fetch all services
 function getAllServices(){
@@ -99,13 +100,14 @@ function initialize(){
 function updateAvailableSlots(service, slotsBooked) {
     const remainingSlots = service.session_slots - service.booked_slots;
     const newRemainingSlots = remainingSlots - slotsBooked;
-    if (newRemainingSlots < 0) {
+    if (newRemainingSlots < 1) {
       // Can't book more slots than are available
       return false;
     }
     availableSessionSlotsDiv.textContent = `Available Session Slots: ${newRemainingSlots}`;
     return true;
   }
+  
   
 
 //The addService function takes an service object as a parameter, sends a POST request to the API to add the new service, and then logs the response to the console.
@@ -127,6 +129,7 @@ function addService(service) {
 
 }
 
+
 //the code selects the form element on the page and adds an event listener for the 'submit' event.
 //When the form is submitted, the function creates a new animal object using the values entered in the form fields and passes it to the addAnimal function to add it to the API.
 let form = document.querySelector("form");
@@ -143,9 +146,3 @@ form.addEventListener('submit', (e) => {
     }
 addService(service);
 });
-
-
-
-
-
-
