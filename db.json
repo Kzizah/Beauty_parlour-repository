@@ -154,60 +154,12 @@
       "price": "USD 560"
     },
     {
-      "service_name": "Face Scrabbing",
-      "image": "https://files.myglamm.com/site-images/768x432/How-To-Use-A-Face-Scrub.jpg",
-      "session_slots": "16",
-      "booked_slots": "10",
-      "price": "USD 650",
-      "id": "eVmlq7c"
-    },
-    {
-      "service_name": "Face Washing",
-      "image": "https://www.shutterstock.com/image-photo/small-boy-splashes-water-on-260nw-83825914.jpg",
-      "session_slots": "90",
-      "booked_slots": "40",
-      "price": "USD 800",
-      "id": "yq2Rpwf"
-    },
-    {
-      "service_name": "Massage",
-      "image": "https://img.freepik.com/free-photo/woman-relaxing-spa_329181-13152.jpg",
-      "session_slots": "50",
-      "booked_slots": "29",
-      "price": "USD 990",
-      "id": "-KCKmVs"
-    },
-    {
-      "service_name": "Face Scrabbing",
-      "image": "https://files.myglamm.com/site-images/768x432/How-To-Use-A-Face-Scrub.jpg",
-      "session_slots": "75",
-      "booked_slots": "41",
-      "price": "USD 300",
-      "id": "fFtJMXI"
-    },
-    {
-      "service_name": "Massage",
-      "image": "https://www.shutterstock.com/image-photo/small-boy-splashes-water-on-260nw-83825914.jpg",
-      "session_slots": "45",
+      "service_name": "Face scrabbing",
+      "image": "https://i.ytimg.com/vi/x2DC2USL_ME/maxresdefault.jpg",
+      "session_slots": "38",
       "booked_slots": "25",
-      "price": "USD 200",
-      "id": "6WxK4kY"
-    },
-    {
-      "service_name": "Face Washing",
-      "image": "https://img.freepik.com/free-photo/woman-relaxing-spa_329181-13152.jpg",
-      "session_slots": "41",
-      "booked_slots": "18",
-      "price": "USD 410",
-      "id": "uV7dxGR"
-    },
-    {
-      "service_name": "Massage",
-      "image": "https://files.myglamm.com/site-images/768x432/How-To-Use-A-Face-Scrub.jpg",
-      "session_slots": "45",
-      "booked_slots": "30",
-      "price": "USD 210",
-      "id": "gNo_XTd"
+      "price": "USD 700",
+      "id": "HFUR5vk"
     }
   ]
 }

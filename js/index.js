@@ -8,8 +8,8 @@ const priceDiv = document.querySelector('#service-price');
 const descriptionDiv = document.querySelector('#service-description');
 const availableSessionSlotsDiv = document.querySelector('#available-session-slots');
 const bookNowBtn = document.querySelector('#book-now');
-imageDiv.style.height ="500px";
-imageDiv.style.width ="500px";
+imageDiv.style.height ="400px";
+imageDiv.style.width ="400px";
 // Display Mobile Menu
 const mobileMenu = () => {
     menu.classList.toggle('is-active');
