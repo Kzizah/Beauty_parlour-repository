@@ -1,6 +1,6 @@
-# Beauty_parlour-
+# ZILDAI BEAUTY PARLOUR
 
-https://img.shields.io/bower/l/license%20MIT
+### AUTHOR: *JELIZA SILATEI*
 
 ## Behavior Driven Development for Service Booking Application
 This is a web application that allows users to book various services. In this application, users can view a list of services and book a session for a specific service.
