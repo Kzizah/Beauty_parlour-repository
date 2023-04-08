@@ -7,7 +7,7 @@ const serviceList = document.querySelector('#service-list ul');
 const serviceDetails = document.querySelector('#service__details');
 const imageDiv = document.querySelector('#service-image'); //This is the service image
 const priceDiv = document.querySelector('#service-price');
-const descriptionDiv = document.querySelector('#service-description');
+// const descriptionDiv = document.querySelector('#service-description');
 const availableSessionSlotsDiv = document.querySelector('#available-session-slots');
 const bookNowBtn = document.querySelector('#book-now');
 imageDiv.style.height ="400px";
@@ -57,6 +57,7 @@ function renderOneService(service){
     // Event listener for buy ticket button clicks
     bookNowBtn.addEventListener("click", (e) =>{
     e.preventDefault();
+    e.stopPropagation();
     console.log("booked Session!");
     if (updateAvailableSlots(service, 1)) {
         service.booked_slots += 1;
@@ -89,7 +90,7 @@ function getAllServices(){
 function getFirstService(){
     fetch('https://dashing-zabaione-026d59.netlify.app/.netlify/functions/services/1')
     .then(res => res.json())
-    .then(services => renderOneService(services))
+    .then(services => renderOneService(services[0]))
 }
 
 //Initialize Render- It will be the first thing that loads from our index js
@@ -114,7 +115,7 @@ function updateAvailableSlots(service, slotsBooked) {
 
 //The addService function takes an service object as a parameter, sends a POST request to the API to add the new service, and then logs the response to the console.
 function addService(service) {
-    fetch(`https://dashing-zabaione-026d59.netlify.app/.netlify/functions/services`, {
+    fetch(`https://dashing-zabaione-026d59.netlify.app/.netlify/functions/services/`, {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
@@ -136,13 +137,12 @@ function addService(service) {
 //When the form is submitted, the function creates a new animal object using the values entered in the form fields and passes it to the addAnimal function to add it to the API.
 let form = document.querySelector("form");
 form.addEventListener('submit', (e) => {
-    reset
     e.preventDefault();
     //get form values
     let service = {
         service_name : document.getElementById("service").value,
         image : document.getElementById("image-url").value,
-        description : document.getElementById("service-description").value,
+        // description : document.getElementById("service-description").value,
         session_slots : document.getElementById("session-slots").value,
         booked_slots : document.getElementById("booked-slots").value,
         price : document.getElementById("session-price").value
