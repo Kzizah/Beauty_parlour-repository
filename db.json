@@ -160,6 +160,30 @@
       "booked_slots": "23",
       "price": "USD 570",
       "id": "K7t81nC"
+    },
+    {
+      "service_name": "",
+      "image": "",
+      "session_slots": "",
+      "booked_slots": "",
+      "price": "",
+      "id": "EBNLwIP"
+    },
+    {
+      "service_name": "",
+      "image": "",
+      "session_slots": "",
+      "booked_slots": "",
+      "price": "",
+      "id": "Ecwwqg1"
+    },
+    {
+      "service_name": "",
+      "image": "",
+      "session_slots": "",
+      "booked_slots": "",
+      "price": "",
+      "id": "pKiE0F_"
     }
   ]
 }

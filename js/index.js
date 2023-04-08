@@ -125,6 +125,7 @@ function addService(service) {
     .then(response => response.json())
     .then(service => {
         console.log('Available SLots updated:', service);
+        form.reset();
         })
     .catch(error => {
         console.error('Error updating Availabe Slots:', error);
@@ -137,7 +138,6 @@ function addService(service) {
 let form = document.querySelector("form");
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    form.reset();
     //get form values
     let service = {
         service_name : document.getElementById("service").value,
