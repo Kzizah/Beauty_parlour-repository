@@ -47,16 +47,15 @@ function renderOneService(service){
    let listItem = document.createElement('li');
    let remainingSlots = service.session_slots - service.booked_slots;
    listItem.innerText = `${service.service_name}`;
-   const deleteButton = createDeleteButton();
-   listItem.appendChild(deleteButton);
+//    const deleteButton = createDeleteButton();
+//    listItem.appendChild(deleteButton);
  
-   // attach event listener to delete button
-   deleteButton.addEventListener('click', () => {
-     listItem.remove(); // remove service item from DOM
-   });
+//    // attach event listener to delete button
+//    deleteButton.addEventListener('click', () => {
+//      listItem.remove(); // remove service item from DOM
+//    });
 
-   serviceList.appendChild(listItem);
-
+//    serviceList.appendChild(listItem);
    listItem.addEventListener('click', () => {
     //Display service Details
     imageDiv.src = service.image;
@@ -142,6 +141,8 @@ function addService(service) {
         console.error('Error updating Availabe Slots:', error);
     });
 
+    
+
 }
 
 //the code selects the form element on the page and adds an event listener for the 'submit' event.
@@ -161,10 +162,10 @@ addService(service);
 });
 
 // create a delete button for each service item
-function createDeleteButton() {
-    const deleteButton = document.createElement('button');
-    deleteButton.classList.add('delete-btn');
-    deleteButton.innerText = 'Delete';
-    return deleteButton;
-  }
+// function createDeleteButton() {
+//     const deleteButton = document.createElement('button');
+//     deleteButton.classList.add('delete-btn');
+//     deleteButton.innerText = 'Delete';
+//     return deleteButton;
+//   }
 
