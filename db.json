@@ -152,6 +152,14 @@
       "session_slots": 43,
       "booked_slots": 27,
       "price": "USD 560"
+    },
+    {
+      "service_name": "Face Scrabbing",
+      "image": "https://www.bubblesindia.com/blogbubbles/wp-content/uploads/2021/08/Benefits-of-Face-Scrub-Bubbles-min.jpg",
+      "session_slots": "34",
+      "booked_slots": "10",
+      "price": "USD 240",
+      "id": "inj5xHB"
     }
   ]
 }
