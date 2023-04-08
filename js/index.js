@@ -90,7 +90,7 @@ function getAllServices(){
 function getFirstService(){
     fetch(' http://localhost:3000/services/1')
     .then(res => res.json())
-    .then(services => renderOneService(services[0]))
+    .then(services => renderOneService(services))
 }
 
 //Initialize Render- It will be the first thing that loads from our index js
@@ -137,6 +137,7 @@ function addService(service) {
 let form = document.querySelector("form");
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    form.reset();
     //get form values
     let service = {
         service_name : document.getElementById("service").value,

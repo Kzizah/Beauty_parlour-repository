@@ -154,60 +154,12 @@
       "price": "USD 560"
     },
     {
-      "service_name": "Beard shaving",
-      "image": "https://www.bubblesindia.com/blogbubbles/wp-content/uploads/2021/08/Benefits-of-Face-Scrub-Bubbles-min.jpg",
-      "session_slots": "78",
-      "booked_slots": "67",
-      "price": "USD 240",
-      "id": "0bQMQtY"
-    },
-    {
-      "service_name": "Beard shaving",
-      "image": "https://www.bubblesindia.com/blogbubbles/wp-content/uploads/2021/08/Benefits-of-Face-Scrub-Bubbles-min.jpg",
-      "session_slots": "78",
-      "booked_slots": "67",
-      "price": "USD 240",
-      "id": "XTpL2s_"
-    },
-    {
-      "service_name": "Beard shaving",
-      "image": "https://www.bubblesindia.com/blogbubbles/wp-content/uploads/2021/08/Benefits-of-Face-Scrub-Bubbles-min.jpg",
-      "session_slots": "78",
-      "booked_slots": "67",
-      "price": "USD 240",
-      "id": "IO7Xqs2"
-    },
-    {
       "service_name": "Hair treatment",
       "image": "https://www.bubblesindia.com/blogbubbles/wp-content/uploads/2021/08/Benefits-of-Face-Scrub-Bubbles-min.jpg",
-      "session_slots": "56",
-      "booked_slots": "34",
+      "session_slots": "34",
+      "booked_slots": "23",
       "price": "USD 570",
-      "id": "1x4MLzM"
-    },
-    {
-      "service_name": "Hair treatment",
-      "image": "https://www.bubblesindia.com/blogbubbles/wp-content/uploads/2021/08/Benefits-of-Face-Scrub-Bubbles-min.jpg",
-      "session_slots": "56",
-      "booked_slots": "34",
-      "price": "USD 570",
-      "id": "3GEI966"
-    },
-    {
-      "service_name": "Skin Treatment",
-      "image": "https://img.freepik.com/premium-photo/cosmetologist-doing-face-treatment-applying-face-mask_1303-28043.jpg",
-      "session_slots": "56",
-      "booked_slots": "49",
-      "price": "USD 240",
-      "id": "-zxptkj"
-    },
-    {
-      "service_name": "Skin Treatment",
-      "image": "https://img.freepik.com/premium-photo/cosmetologist-doing-face-treatment-applying-face-mask_1303-28043.jpg",
-      "session_slots": "56",
-      "booked_slots": "49",
-      "price": "USD 240",
-      "id": "YJAPdaq"
+      "id": "K7t81nC"
     }
   ]
 }
