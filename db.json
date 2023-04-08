@@ -152,14 +152,6 @@
       "session_slots": 43,
       "booked_slots": 27,
       "price": "USD 560"
-    },
-    {
-      "service_name": "Face scrabbing",
-      "image": "https://i.ytimg.com/vi/x2DC2USL_ME/maxresdefault.jpg",
-      "session_slots": "38",
-      "booked_slots": "25",
-      "price": "USD 700",
-      "id": "HFUR5vk"
     }
   ]
 }

@@ -136,6 +136,7 @@ function addService(service) {
 //When the form is submitted, the function creates a new animal object using the values entered in the form fields and passes it to the addAnimal function to add it to the API.
 let form = document.querySelector("form");
 form.addEventListener('submit', (e) => {
+    reset
     e.preventDefault();
     //get form values
     let service = {
