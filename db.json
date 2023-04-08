@@ -152,38 +152,6 @@
       "session_slots": 43,
       "booked_slots": 27,
       "price": "USD 560"
-    },
-    {
-      "service_name": "Hair treatment",
-      "image": "https://www.bubblesindia.com/blogbubbles/wp-content/uploads/2021/08/Benefits-of-Face-Scrub-Bubbles-min.jpg",
-      "session_slots": "34",
-      "booked_slots": "23",
-      "price": "USD 570",
-      "id": "K7t81nC"
-    },
-    {
-      "service_name": "",
-      "image": "",
-      "session_slots": "",
-      "booked_slots": "",
-      "price": "",
-      "id": "EBNLwIP"
-    },
-    {
-      "service_name": "",
-      "image": "",
-      "session_slots": "",
-      "booked_slots": "",
-      "price": "",
-      "id": "Ecwwqg1"
-    },
-    {
-      "service_name": "",
-      "image": "",
-      "session_slots": "",
-      "booked_slots": "",
-      "price": "",
-      "id": "pKiE0F_"
     }
   ]
 }

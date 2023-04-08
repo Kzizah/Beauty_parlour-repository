@@ -125,7 +125,8 @@ function addService(service) {
     .then(response => response.json())
     .then(service => {
         console.log('Available SLots updated:', service);
-        form.reset();
+        renderOneService(service); // add the new service to the DOM
+        form.reset(); //reset the form
         })
     .catch(error => {
         console.error('Error updating Availabe Slots:', error);
@@ -142,7 +143,6 @@ form.addEventListener('submit', (e) => {
     let service = {
         service_name : document.getElementById("service").value,
         image : document.getElementById("image-url").value,
-        description : document.getElementById("service-description").value,
         session_slots : document.getElementById("session-slots").value,
         booked_slots : document.getElementById("booked-slots").value,
         price : document.getElementById("session-price").value
