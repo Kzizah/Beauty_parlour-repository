@@ -77,7 +77,7 @@ function renderOneService(service){
 
 // Fetch all services
 function getAllServices(){
-    fetch(' https://admirable-cassata-ea2f4a.netlify.app/.netlify/functions/services')
+    fetch(' http://localhost:3000/services')
     .then(res => res.json())
     .then(services => services.forEach(service => {
         renderOneService(service)
@@ -88,7 +88,7 @@ function getAllServices(){
 //Fetch Requests
 //Get Fetch for one service resource
 function getFirstService(){
-    fetch(' https://admirable-cassata-ea2f4a.netlify.app/.netlify/functions/services/1')
+    fetch(' http://localhost:3000/services/1')
     .then(res => res.json())
     .then(services => renderOneService(services[0]))
 }
@@ -115,7 +115,7 @@ function updateAvailableSlots(service, slotsBooked) {
 
 //The addService function takes an service object as a parameter, sends a POST request to the API to add the new service, and then logs the response to the console.
 function addService(service) {
-    fetch(`https://admirable-cassata-ea2f4a.netlify.app/.netlify/functions/services`, {
+    fetch(`http://localhost:3000/services`, {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
