@@ -77,7 +77,7 @@ function renderOneService(service){
 
 // Fetch all services
 function getAllServices(){
-    fetch('https://dashing-zabaione-026d59.netlify.app/.netlify/functions/services')
+    fetch(' http://localhost:3000/services')
     .then(res => res.json())
     .then(services => services.forEach(service => {
         renderOneService(service)
@@ -88,7 +88,7 @@ function getAllServices(){
 //Fetch Requests
 //Get Fetch for one service resource
 function getFirstService(){
-    fetch('https://dashing-zabaione-026d59.netlify.app/.netlify/functions/services/1')
+    fetch(' http://localhost:3000/services/1')
     .then(res => res.json())
     .then(services => renderOneService(services[0]))
 }
@@ -115,7 +115,7 @@ function updateAvailableSlots(service, slotsBooked) {
 
 //The addService function takes an service object as a parameter, sends a POST request to the API to add the new service, and then logs the response to the console.
 function addService(service) {
-    fetch(`https://dashing-zabaione-026d59.netlify.app/.netlify/functions/services/`, {
+    fetch(`http://localhost:3000/services`, {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
@@ -132,7 +132,6 @@ function addService(service) {
 
 }
 
-
 //the code selects the form element on the page and adds an event listener for the 'submit' event.
 //When the form is submitted, the function creates a new animal object using the values entered in the form fields and passes it to the addAnimal function to add it to the API.
 let form = document.querySelector("form");
@@ -142,10 +141,11 @@ form.addEventListener('submit', (e) => {
     let service = {
         service_name : document.getElementById("service").value,
         image : document.getElementById("image-url").value,
-        // description : document.getElementById("service-description").value,
+        description : document.getElementById("service-description").value,
         session_slots : document.getElementById("session-slots").value,
         booked_slots : document.getElementById("booked-slots").value,
         price : document.getElementById("session-price").value
     }
 addService(service);
 });
+
