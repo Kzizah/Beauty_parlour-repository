@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  json-server:
+    image: node:18  # Use Node.js version 18 or higher
+    volumes:
+      - .:/usr/src/app  # Mount the current directory to /usr/src/app
+    working_dir: /usr/src/app  # Set the working directory
+    ports:
+      - "5000:3000"  # Map external port 5000 to internal port 3000
+    environment:
+      - NODE_ENV=development
+    command: npx json-server --watch db.json --port 3000 --host 0.0.0.0 --static .  # Serve static files from current directory
